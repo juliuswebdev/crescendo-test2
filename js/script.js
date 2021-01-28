@@ -8,7 +8,6 @@ $(document).ready(function(){
         }
     });
 
-
     $('.hambuger-menu a').click(function(e){
         e.preventDefault();
         var $this = $(this),
@@ -25,14 +24,12 @@ $(document).ready(function(){
     $('.slick-slider').slick({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll:3,
         dots: false,
         responsive: [
             {
               breakpoint: 768,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
                 infinite: true,
                 dots: true,
                 prevArrow: false,
@@ -41,4 +38,6 @@ $(document).ready(function(){
             },
         ]
     });
+
+    $('.events-area').eqHeights({child:'.event-item'});
 });
